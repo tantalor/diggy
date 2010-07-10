@@ -426,8 +426,7 @@ DGE.setCSS = (function() {
 				return el;
 
 			case 'rotation':
-				// Known bug: this doesn't work in Firefox, though setting via Firebug works ...
-				el.style['-moz-transform'] = DGE.sprintf('rotate(%s)', value);
+				el.style.MozTransform = DGE.sprintf('rotate(%s)', value);
 				el.style['-webkit-transform'] = DGE.sprintf('rotate(%s)', value);
 				return el;
 
